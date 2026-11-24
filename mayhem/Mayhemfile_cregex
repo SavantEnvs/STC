@@ -1,0 +1,9 @@
+project: savantenvs/STC
+target: cregex
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cregex/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cregex
+    libfuzzer: true
+    timeout: 5

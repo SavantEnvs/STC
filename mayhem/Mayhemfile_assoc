@@ -1,0 +1,9 @@
+project: savantenvs/STC
+target: assoc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/assoc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_assoc
+    libfuzzer: true
+    timeout: 5

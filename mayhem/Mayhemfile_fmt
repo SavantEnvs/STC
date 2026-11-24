@@ -1,0 +1,9 @@
+project: savantenvs/STC
+target: fmt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fmt/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fmt
+    libfuzzer: true
+    timeout: 5

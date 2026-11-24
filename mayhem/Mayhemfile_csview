@@ -1,0 +1,9 @@
+project: savantenvs/STC
+target: csview
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/csview/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_csview
+    libfuzzer: true
+    timeout: 5
